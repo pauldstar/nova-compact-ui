@@ -1,0 +1,361 @@
+.sidebar .sidebar-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.nav-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.sidebar .logo a.logo-mini,
+.sidebar .logo a.logo-normal {
+    -webkit-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+}
+
+a.show .caret {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    -webkit-transition: all .15s ease 0s;
+    transition: all .15s ease 0s
+}
+
+.sidebar .nav .caret {
+    top: 14px;
+    position: absolute;
+    right: 10px
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    box-shadow: 0 2px 22px 0 rgba(0, 0, 0, .2);
+}
+
+.sidebar .sidebar-wrapper {
+    position: relative;
+    height: calc(100vh - 75px);
+    overflow: auto;
+    z-index: 4;
+    padding-bottom: 100px;
+}
+
+
+.sidebar .sidebar-wrapper > .nav [data-toggle=collapse] ~ div > ul > li > a span {
+    display: inline-block
+}
+
+.sidebar .sidebar-wrapper > .nav [data-toggle=collapse] ~ div > ul > li > a .sidebar-normal {
+    margin: 0;
+    position: relative;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+    white-space: nowrap;
+    display: block;
+    z-index: 1;
+    line-height: 23px;
+    -webkit-transition: opacity .3s ease 0s, -webkit-transform .3s ease 0s;
+    transition: transform .3s ease 0s, opacity .3s ease 0s, -webkit-transform .3s ease 0s
+}
+
+.sidebar .sidebar-wrapper > .nav [data-toggle=collapse] ~ div > ul > li > a .sidebar-mini-icon {
+    text-transform: uppercase;
+    width: 34px;
+    margin-right: 10px;
+    z-index: 1;
+    margin-left: 0;
+    text-align: center;
+    position: relative;
+    float: left;
+    display: inherit;
+    line-height: 24px;
+    -webkit-transition: opacity .3s ease 0s, -webkit-transform .3s ease 0s;
+    transition: transform .3s ease 0s, opacity .3s ease 0s, -webkit-transform .3s ease 0s;
+}
+
+.sidebar .sidebar-wrapper > .nav [data-toggle=collapse] ~ div > ul > li > a i {
+    line-height: 20px;
+    width: 26px
+}
+
+.sidebar .sidebar-wrapper [data-toggle=collapse] ~ div > ul > li.router-link-active > a {
+    background-color: transparent;
+    box-shadow: none
+}
+
+.sidebar .sidebar-wrapper [data-toggle=collapse] ~ div > ul > li.router-link-active > a .sidebar-mini-icon {
+    color: inherit
+}
+
+.sidebar .sidebar-wrapper [data-toggle=collapse] ~ div > ul > li.router-link-active > a:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 44px;
+    width: calc(100% - 5px);
+    top: 0;
+    border-radius: 30px;
+    left: 2px;
+    z-index: 0
+}
+
+.sidebar .nav {
+    margin-top: 8px;
+    display: block;
+    padding-bottom: 1px;
+}
+
+.sidebar .nav .caret {
+    top: 14px;
+    position: absolute;
+    right: 10px
+}
+
+.sidebar .nav li > a + div .nav li > a {
+    margin-top: 7px
+}
+
+.sidebar .nav li > a {
+    margin: 10px 15px 0;
+    border-radius: 30px;
+    color: hsla(0, 0%, 100%, 0.5);
+    display: block;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 8px;
+    line-height: 1.625rem;
+}
+
+.sidebar .nav li:hover > a {
+    color: #ffffff;
+}
+
+.sidebar .nav li:first-child > a {
+    margin: 0 15px
+}
+
+.sidebar .nav li:focus:not(.router-link-active) > a,
+.sidebar .nav li:hover:not(.router-link-active) > a {
+    background-color: hsla(0, 0%, 100%, .1);
+}
+
+.sidebar .nav li:focus:not(.router-link-active) > a i,
+.sidebar .nav li:hover:not(.router-link-active) > a i {
+    color: #fff
+}
+
+.sidebar .nav li.router-link-active > a {
+    background-color: #fff;
+    box-shadow: 0 1px 15px 1px rgba(39, 39, 39, .1);
+    color: #252D37;
+}
+
+.sidebar .nav li.router-link-active > a[data-toggle=collapse],
+.sidebar .nav li > a[aria-expanded=true] {
+    background-color: hsla(0, 0%, 100%, .1);
+    box-shadow: none;
+    color: #fff
+}
+
+.sidebar .nav li.router-link-active > a[data-toggle=collapse] i,
+.sidebar .nav li > a[aria-expanded=true] i {
+    color: #fff
+}
+
+.sidebar .nav li.router-link-active > a:not([data-toggle=collapse]),
+.sidebar .nav li.router-link-active > a:not([data-toggle=collapse]) i {
+    color: #252D37;
+}
+
+.sidebar .nav li.router-link-active ~ li:focus a[aria-expanded=true],
+.sidebar .nav li.router-link-active ~ li:hover a[aria-expanded=true] {
+    background-color: hsla(0, 0%, 100%, .1)
+}
+
+.sidebar .nav li.router-link-active ~ li:focus a[aria-expanded=true] i,
+.sidebar .nav li.router-link-active ~ li:hover a[aria-expanded=true] i {
+    color: #fff
+}
+
+.sidebar .nav li.router-link-active ~ li a[aria-expanded=true] {
+    background-color: transparent
+}
+
+.sidebar .nav li.router-link-active ~ li a[aria-expanded=true] i {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.sidebar .nav li a[data-toggle=collapse] ~ div li:not(.router-link-active) > a:after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 5px);
+    background-color: transparent;
+    height: 44px;
+    top: 0;
+    border-radius: 30px;
+    left: 2px;
+    z-index: 0
+}
+
+.sidebar .nav li a[data-toggle=collapse] ~ div li:not(.router-link-active):hover > a {
+    background-color: transparent
+}
+
+.sidebar .nav li a[data-toggle=collapse] ~ div li:not(.router-link-active):hover > a:after {
+    background-color: hsla(0, 0%, 100%, .1)
+}
+
+.sidebar .nav p {
+    margin-top: 3px;
+    line-height: 30px;
+    position: relative;
+    display: block;
+    height: auto;
+    white-space: nowrap;
+    -webkit-transition: opacity .3s ease 0s, -webkit-transform .3s ease 0s;
+    transition: transform .3s ease 0s, opacity .3s ease 0s, -webkit-transform .3s ease 0s;
+}
+
+.sidebar .nav i {
+    font-size: 23px;
+    float: left;
+    margin-right: 7px;
+    line-height: 34px;
+    width: 34px;
+    text-align: center;
+    color: hsla(0, 0%, 100%, .5);
+    position: relative;
+}
+
+.sidebar .logo {
+    position: relative;
+    padding: .5rem .7rem;
+    z-index: 4;
+    background: #252D37;
+}
+
+.sidebar .logo a.logo-mini {
+    opacity: 1;
+    float: left;
+    width: 34px;
+    text-align: center;
+    margin: 3px 12px 0 10px;
+}
+
+.sidebar .logo a.logo-normal {
+    display: block;
+    opacity: 1;
+    position: relative;
+    top: 8px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.sidebar .logo p {
+    float: left;
+    font-size: 20px;
+    margin: 10px;
+    line-height: 20px
+}
+
+.sidebar .logo .simple-text {
+    display: block;
+    text-decoration: none;
+    overflow: hidden
+}
+
+.sidebar:after,
+.sidebar:before {
+    display: block;
+    content: "";
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0
+}
+
+.perfect-scrollbar-off .sidebar .sidebar-wrapper {
+    overflow: auto
+}
+
+.sidebar {
+    height: 100%
+}
+
+.sidebar,
+.sidebar-wrapper {
+    width: 80px;
+    -webkit-transition-property: top, bottom, width;
+    transition-property: top, bottom, width;
+    -webkit-transition-duration: .2s, .2s, .35s;
+    transition-duration: .2s, .2s, .35s;
+    -webkit-transition-timing-function: linear, linear, ease;
+    transition-timing-function: linear, linear, ease;
+    -webkit-overflow-scrolling: touch
+}
+
+.sidebar {
+    display: block;
+    z-index: 1030
+}
+
+.sidebar .logo a.logo-normal,
+.sidebar .sidebar-wrapper > .nav [data-toggle=collapse] ~ div > ul > li > a .sidebar-normal,
+.sidebar .sidebar-wrapper > .nav li > a p {
+    opacity: 0;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0)
+}
+
+.sidebar:hover {
+    width: 270px
+}
+
+.sidebar:hover .logo a.logo-normal {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.sidebar:hover .sidebar-wrapper {
+    width: 270px;
+}
+
+.sidebar:hover .sidebar-wrapper > .nav [data-toggle=collapse] ~ div > ul > li > a .sidebar-normal,
+.sidebar:hover .sidebar-wrapper > .nav li > a p {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+}
