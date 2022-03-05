@@ -325,7 +325,7 @@
             async getResource() {
                 this.resource = null
 
-                let urlPrefix = '/fifteen-group/nova-compact-reactive-ui',
+                let urlPrefix = '/pauldstar/nova-compact-reactive-ui',
                     urlSegments = `${this.resourceName}/${this.resourceId}/update-detail`;
 
                 return Minimum(

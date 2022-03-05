@@ -38,7 +38,7 @@ class ToolServiceProvider extends ServiceProvider
 
         Route::middleware(['nova'])
             ->namespace('Pauldstar\NovaCompactUi\Http\Controllers')
-            ->prefix('fifteen-group/nova-compact-reactive-ui')
+            ->prefix('pauldstar/nova-compact-reactive-ui')
             ->group(__DIR__ . '/../routes/api.php');
     }
 }

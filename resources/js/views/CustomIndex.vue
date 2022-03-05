@@ -529,7 +529,7 @@ export default {
             this.$nextTick(() => {
                 this.clearResourceSelections()
 
-                let prefix = '/fifteen-group/nova-compact-reactive-ui/';
+                let prefix = '/pauldstar/nova-compact-reactive-ui/';
 
                 return Minimum(
                     Nova.request().get(prefix + this.resourceName, {

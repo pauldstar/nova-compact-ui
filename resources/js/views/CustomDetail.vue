@@ -36,7 +36,7 @@
         methods: {
             // @copy UpdateDetail
             async getResourceAuth() {
-                let urlPrefix = '/fifteen-group/nova-compact-reactive-ui',
+                let urlPrefix = '/pauldstar/nova-compact-reactive-ui',
                     urlSegments = `${this.resourceName}/${this.resourceId}/resource-auth`;
 
                 return Minimum(

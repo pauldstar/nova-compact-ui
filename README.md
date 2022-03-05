@@ -7,7 +7,7 @@ UI to minimise scrolling and clicking, with reactive (ajax) fields.
 
 2. In the `./nova-components` directory, add this repo as a git submodule:
     ```$xslt
-    git submodule add https://pauldstar@bitbucket.org/fifteendigital/nova-compact-ui.git
+    git submodule add https://pauldstar@bitbucket.org/pauldstar/nova-compact-ui.git
     ```
 
 3. Register the tool in `./app/Providers/NovaServiceProvider`:
@@ -24,7 +24,7 @@ UI to minimise scrolling and clicking, with reactive (ajax) fields.
     ```$xslt
     {
         "require": {
-            "fifteen-group/nova-compact-ui": "9999999-dev",
+            "pauldstar/nova-compact-ui": "9999999-dev",
         },
         "repositories": [
             {

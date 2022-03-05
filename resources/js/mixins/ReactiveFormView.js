@@ -23,7 +23,7 @@ export default {
             this.fieldsWithValues[e.fieldName] = e.value;
             this.fieldsWithValues.resourceId = e.resourceId;
 
-            let urlPrefix = '/fifteen-group/nova-compact-reactive-ui/calculate';
+            let urlPrefix = '/pauldstar/nova-compact-reactive-ui/calculate';
 
             Nova.request().post(
                 `${urlPrefix}/${this.resourceName}/${e.broadcastFrom}`,

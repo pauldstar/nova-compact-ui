@@ -170,7 +170,7 @@ export default {
 
     methods: {
         async forceDeleteUnsavedChanges() {
-            let urlPrefix = '/fifteen-group/nova-compact-reactive-ui';
+            let urlPrefix = '/pauldstar/nova-compact-reactive-ui';
 
             return Nova.request({
                 url: `${urlPrefix}/${this.field.resourceName}/unsaved`,
@@ -209,7 +209,7 @@ export default {
         },
 
         async getTableGroups() {
-            return Nova.request().get('/fifteen-group/nova-compact-reactive-ui/table-groups', {
+            return Nova.request().get('/pauldstar/nova-compact-reactive-ui/table-groups', {
                 params: {
                     viaResource: this.resourceName,
                     viaResourceId: this.resourceId
